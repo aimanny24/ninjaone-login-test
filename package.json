@@ -1,0 +1,12 @@
+{
+  "name": "ninjaone-login-test",
+  "version": "1.0.0",
+  "description": "Automated Cypress tests for NinjaOne login",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^12.0.0"
+  }
+}
