@@ -23,10 +23,10 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress run --spec "cypress/e2e/specs/login.cy.js" --reporter mochawesome
+        run: npx cypress run --spec "cypress/e2e/specs/UITest/login.cy.js" --reporter mochawesome
 
       - name: Upload Test Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: mochawesome-report
           path: mochawesome-report/
