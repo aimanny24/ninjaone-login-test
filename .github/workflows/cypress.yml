@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Run Cypress Tests
 
 on:
   push:
@@ -7,15 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  cypress-run:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run Cypress tests
+      - name: Run Cypress
         uses: cypress-io/github-action@v6
         with:
-          install-command: npm install
-          command: npx cypress run --spec "cypress/e2e/specs/UITest/login.cy.js" --reporter mochawesome
+            command: npx cypress run --spec 'cypress/e2e/specs/UITest/login.cy.js'
+
