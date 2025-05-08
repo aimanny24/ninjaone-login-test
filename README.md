@@ -1,4 +1,4 @@
-# 🧪 NinjaOne Login Test (Cypress)
+# NinjaOne Login Test (Cypress)
 
 This project automates login/logout tests for the NinjaOne login page.
 

@@ -10,21 +10,21 @@ describe('NinjaOne Login Page', () => {
     cy.assertLoginFieldsVisible();
   });
 
-  it('verifies Email field is visible and editable', () => {
+  it('verify Email field is visible and editable', () => {
     loginPage.getEmailField().should('be.visible').type(Cypress.env('email'));
   });
 
-  it('verifies Password field is visible and masks input', () => {
+  it('verify Password field is visible and masks input', () => {
     loginPage.getPasswordField().should('be.visible').type(Cypress.env('password'));
     loginPage.getPasswordField().should('have.attr', 'type', 'password');
   });
 
-  it('verifies Keep me signed in checkbox is visible and clickable', () => {
+  it('verify Keep me signed in checkbox is visible and clickable', () => {
     loginPage.getStaySignedInCheckbox().should('be.visible').should('not.be.checked');
     loginPage.getStaySignedInCheckbox().check({ force: true });
   });
 
-  it('verifies Sign in button is visible and clickable', () => {
+  it('verify Sign in button is visible and clickable', () => {
     loginPage.getSignInButton().should('be.visible').should('not.be.disabled').click();
   });
 
